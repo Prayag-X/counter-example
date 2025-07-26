@@ -29,14 +29,21 @@ class _HomePageState extends State<HomePage> {
               "$count",
               style: TextStyle(fontSize: 60),
             ),
-            Container(
-              width: 100,
-              height: 40,
-              color: Colors.blue,
-              child: Center(
-                child: Text(
-                  "Increment",
-                  style: TextStyle(color: Colors.white),
+            GestureDetector(
+                onTap: () {
+                  setState(() {
+                    count++;
+                  });
+                },
+              child: Container(
+                width: 100,
+                height: 40,
+                color: Colors.blue,
+                child: Center(
+                  child: Text(
+                    "Increment",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
             )
